@@ -14,7 +14,7 @@ const Welcome = ({navigation}) => {
       <View style={styles.bottomContainer}>
         <TouchableOpacity
           style={[styles.button, {height: 50}]}
-          onPress={() => navigation.navigate('FaceIdentity')}>
+          onPress={() => navigation.navigate('Face Identity')}>
           <LinearGradient
             colors={['#2441C7', '#1F1E1F']}
             style={styles.gradient}
@@ -52,6 +52,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: 10,
+    cursor: 'pointer',
   },
   buttonText: {
     color: '#ffffff',

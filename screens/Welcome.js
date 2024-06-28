@@ -14,7 +14,7 @@ const Welcome = ({navigation}) => {
       <View style={styles.btnContainer}>
         <TouchableOpacity
           style={[styles.button, {height: 50}]}
-          onPress={() => navigation.navigate('GetStarted')}>
+          onPress={() => navigation.navigate('Get Started')}>
           <LinearGradient
             colors={['#2441C7', '#1F1E1F']}
             style={styles.gradient}
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: '#EAECF8',
+    backgroundColor: 'white',
     padding: 60,
   },
   btnContainer: {

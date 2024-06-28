@@ -32,7 +32,7 @@ const Welcome = ({navigation}) => {
       <View style={styles.bottomContainer}>
         <TouchableOpacity
           style={[styles.button, {height: 50}]}
-          onPress={() => navigation.navigate('FaceIdentity')}>
+          onPress={() => navigation.navigate('Camera')}>
           <LinearGradient
             colors={['#2441C7', '#1F1E1F']}
             style={styles.gradient}
@@ -51,11 +51,10 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     backgroundColor: '#EAECF8',
-    padding: 60,
   },
   headerContainer: {
     width: '130%',
-    height: 250,
+    height: '50%',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -74,7 +73,7 @@ const styles = StyleSheet.create({
   contentContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: 20,
+    padding: 30,
   },
   leftContent: {
     flex: 1,
@@ -83,7 +82,6 @@ const styles = StyleSheet.create({
   rightContent: {
     flex: 1,
     alignItems: 'flex-start',
-    marginLeft: 60,
   },
   description: {
     textAlign: 'left',
@@ -99,6 +97,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: 10,
+    cursor: 'pointer',
   },
   buttonText: {
     color: '#ffffff',
@@ -111,7 +110,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingVertical: 12,
     paddingHorizontal: 20,
-    width: '100%',
+    width: '60%',
   },
 });
 
