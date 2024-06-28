@@ -35,7 +35,7 @@ const CameraComponent = () => {
         type={type}
         captureAudio={false}
         onFacesDetected={handlerFace}
-        faceDetectionLandmarks={RNCamera.Constants.FaceDetection.Landmarks.all}
+        faceDetectionLandmarks={RNCamera.Constants.FaceDetection.Landmarks?.all}
       />
       {box && (
         <>

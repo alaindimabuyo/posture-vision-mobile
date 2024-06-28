@@ -1,8 +1,8 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
-const Welcome = ({navigation}) => {
+const Welcome = ({ navigation }) => {
   const handleSignUpWithGoogle = () => {
     // Handle Sign Up with Google button press
   };
@@ -10,21 +10,21 @@ const Welcome = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Welcome to Posture Vision</Text>
-      <Text style={styles.subHeader}>Signup to Continue</Text>
+      {/* <Text style={styles.subHeader}>Signup to Continue</Text> */}
       <View style={styles.btnContainer}>
         <TouchableOpacity
-          style={[styles.button, {height: 50}]}
+          style={[styles.button, { height: 50 }]}
           onPress={() => navigation.navigate('Get Started')}>
           <LinearGradient
             colors={['#2441C7', '#1F1E1F']}
             style={styles.gradient}
-            start={{x: 0, y: 0}}
-            end={{x: 1, y: 0}}>
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 0 }}>
             <Text style={styles.buttonText}>Sign Up</Text>
           </LinearGradient>
         </TouchableOpacity>
         <TouchableOpacity
-          style={[styles.buttonGoogle, {height: 50}]}
+          style={[styles.buttonGoogle, { height: 50 }]}
           onPress={handleSignUpWithGoogle}>
           <Text style={styles.buttonTextGoogle}>Sign Up with Google</Text>
         </TouchableOpacity>
@@ -42,14 +42,14 @@ const Welcome = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: 'white',
+    backgroundColor: '#EAECF8',
     padding: 60,
   },
   btnContainer: {
-    flex: 1,
-    justifyContent: 'center',
     width: '100%',
+    paddingTop: 20,
   },
   botText: {
     alignItems: 'center',
@@ -80,11 +80,13 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginBottom: 5,
     fontFamily: 'Questrial-Regular',
+    textAlign: 'center',
   },
   subHeader: {
     fontSize: 16,
     marginBottom: 20,
     fontFamily: 'Questrial-Regular',
+    textAlign: 'center',
   },
   botHeader: {
     fontSize: 15,
