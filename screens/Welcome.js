@@ -30,7 +30,7 @@ const Welcome = ({ navigation }) => {
         </TouchableOpacity>
         <View style={styles.botText}>
           <Text style={styles.botHeader}>Already have an account?</Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('SignIn')}>
             <Text style={styles.subBotHeader}>SIGN IN</Text>
           </TouchableOpacity>
         </View>

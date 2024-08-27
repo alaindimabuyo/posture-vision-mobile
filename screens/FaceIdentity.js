@@ -3,7 +3,7 @@ import {View, Text, TouchableOpacity, StyleSheet, Image} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Icon from '../assets/svg-camera.svg';
 
-const Welcome = ({navigation}) => {
+const FaceIdentity = ({navigation}) => {
   return (
     <View style={styles.container}>
       <LinearGradient
@@ -41,6 +41,12 @@ const Welcome = ({navigation}) => {
             <Text style={styles.buttonText}>Activate Camera</Text>
           </LinearGradient>
         </TouchableOpacity>
+        
+        <TouchableOpacity
+          style={styles.skipButton}
+          onPress={() => navigation.navigate('Home')}>
+          <Text style={styles.skipText}>Skip for now</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -50,13 +56,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: '#EAECF8',
+    backgroundColor: '#FFFFFF',
   },
   headerContainer: {
-    width: '130%',
-    height: '50%',
+    width: '100%',
+    height: '40%',  // Reduced height to create space for the button
     justifyContent: 'center',
     alignItems: 'center',
+    paddingBottom: 20,  // Added padding to create space below the image
   },
   circle: {
     width: 200,
@@ -90,14 +97,15 @@ const styles = StyleSheet.create({
   bottomContainer: {
     position: 'absolute',
     bottom: 30,
-    width: '150%',
-    paddingHorizontal: 60,
+    width: '100%',
+    paddingHorizontal: 20,
+    alignItems: 'center',
   },
   button: {
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: 10,
-    cursor: 'pointer',
+    marginTop: 20,  // Added marginTop to create space between the image and button
   },
   buttonText: {
     color: '#ffffff',
@@ -110,8 +118,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingVertical: 12,
     paddingHorizontal: 20,
-    width: '60%',
+    width: '100%',
+  },
+  skipButton: {
+    marginTop: 10,
+  },
+  skipText: {
+    color: 'black',
+    fontSize: 16,
+    textDecorationLine: 'underline',
   },
 });
 
-export default Welcome;
+export default FaceIdentity;

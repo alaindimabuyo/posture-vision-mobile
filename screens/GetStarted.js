@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Icon from '../assets/get-started.svg';
 
-const Welcome = ({ navigation }) => {
+const GetStarted = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.mainContent}>
@@ -75,4 +75,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Welcome;
+export default GetStarted;
